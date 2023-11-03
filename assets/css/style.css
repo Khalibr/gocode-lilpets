@@ -1,0 +1,263 @@
+/* import font-google popping-400*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+
+/* normalize */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    scroll-behavior: smooth;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 3rem;
+}
+
+/* navbar */
+.logo-header img {
+    width: 6rem;
+}
+
+.menu-nav ul {
+    display: flex;
+}
+
+.menu-nav ul li {
+    margin: 0 1rem;
+    text-transform: uppercase;
+}
+.menu-nav a{
+    color: #212529;
+}
+.menu-nav a:hover{
+    color: #0fa3b1;
+    transition: .2s ease-in;
+    text-decoration: underline #0fa3b1 0.3rem;
+}
+
+main {
+    box-shadow: 0 0 1.5rem black;
+}
+/* main */
+#index-main {
+    background-color: #ffd6ff;
+    padding: 1rem 3rem;
+    height: 70vh;
+}
+
+.main-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-banner img{
+    width: 50%;
+    border-radius: 2rem;
+}
+
+.main-banner article {
+    width: 35%;
+}
+.main-banner h1 {
+    font-size: 6rem;
+    color: #fb6f92;
+}
+.main-banner span {
+    color: #212529;
+}
+.main-banner h2 {
+    font-size: 1.5rem;
+    color: #0fa3b1;
+    margin-bottom: -2rem;
+}
+
+.main-banner p {
+    font-size: 1.1rem;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    background-color: #212529;
+}
+
+footer ul {
+    display: flex;
+}
+
+footer ul li {
+    margin: 0 1rem;
+}
+
+footer h4, h5 {
+    color: #eee4e1;
+    font-weight: normal;
+}
+
+footer a {
+    color: #fb6f92;
+    transition: .2s ease-in;
+}
+
+footer a:hover{
+    color: #0fa3b1;
+}
+
+/* --ABOUT-- */
+
+#contact-main {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas:
+    "h1 h1"
+    "section-location form";
+    background-color: #bde0fe;
+    padding: 1rem 3rem;
+    height: 70vh;
+}
+#contact-main h1 {
+    grid-area: h1;
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+#contact-main span {
+    color: #fb6f92;
+}
+
+.location {
+    grid-area: section-location;
+    margin: 0 auto;
+}
+
+.location iframe {
+    box-shadow: 1rem #0069d9;
+}
+
+.form {
+    grid-area: form;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+}
+
+.contact-form button {
+    text-align: center;
+    width: 50%;
+    margin: 1rem auto;
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color .15s ease-in-out;
+}
+
+.contact-form button:hover{
+    background-color: #0069d9;
+}
+
+/* --CONTACT-- */
+
+#about-main {
+    background-color: #ffd6ff;
+    padding: 1rem 3rem;
+}
+
+#about-main h1, p {
+    text-align: center;
+    margin-bottom: 1.3rem;
+}
+
+#about-main span {
+    color: #0fa3b1;
+}
+
+.row {
+    display: flex;
+}
+
+.foto-medico {
+    width: 50%;
+    border-radius: 10%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.container blockquote {
+    margin: .5rem 0;
+    width: 90%;
+    text-align: center;
+}
+
+.medico {
+    justify-content: space-evenly;
+}
+
+/* -- LOGIN / SINGUP */
+#index-login, #index-signup {
+    background-color: #ffd6ff;
+    padding: 1rem 3rem;
+    height: 70vh;
+
+    background-image: url(../img/images/background-login.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pic-login, .pic-signup {
+    margin: 2rem;
+    width: 25rem;
+    border-radius: 10%;
+}
+
+#index-login .login {
+    display: flex;
+    background: #0069d975;
+    justify-content: center;
+}
+
+
+.section-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #0069d9;
+    margin: 1rem;
+    width: 50rem;
+    border-radius: 2rem;
+}
+
+.section-login h2 {
+    color: white;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    height: 5rem;
+}
