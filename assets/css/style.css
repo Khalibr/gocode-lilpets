@@ -13,7 +13,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* header */
+/* --- --- --- INDEX --- --- --- */
 header {
     display: flex;
     justify-content: space-between;
@@ -21,69 +21,75 @@ header {
     padding: .5rem 3rem;
 }
 
-/* navbar */
-.logo-header img {
+
+/* NAVBAR */
+.header__logo img {
     width: 6rem;
 }
 
-.menu-nav ul {
+.navbar ul {
     display: flex;
 }
 
-.menu-nav ul li {
+.navbar ul li {
     margin: 0 1rem;
     text-transform: uppercase;
 }
-.menu-nav a{
+.navbar a{
     color: #212529;
 }
-.menu-nav a:hover{
+.navbar a:hover{
     color: #0fa3b1;
     transition: .2s ease-in;
     text-decoration: underline #0fa3b1 0.3rem;
 }
 
+
+/* MAIN */
 main {
     box-shadow: 0 0 1.5rem black;
 }
-/* main */
-#index-main {
+
+.main__index {
     background-color: #ffd6ff;
     padding: 1rem 3rem;
     height: 70vh;
 }
 
-.main-banner {
+.main__banner {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.main-banner img{
+.main__banner img{
     width: 50%;
     border-radius: 2rem;
 }
 
-.main-banner article {
+.main__banner article {
     width: 35%;
 }
-.main-banner h1 {
+.main__banner h1 {
     font-size: 6rem;
     color: #fb6f92;
 }
-.main-banner span {
+.main__banner span {
     color: #212529;
 }
-.main-banner h2 {
+.main__banner h2 {
     font-size: 1.5rem;
     color: #0fa3b1;
     margin-bottom: -2rem;
 }
 
-.main-banner p {
+.main__banner p {
     font-size: 1.1rem;
 }
-footer {
+
+
+/* Footer */
+.footer__all {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -91,31 +97,31 @@ footer {
     background-color: #212529;
 }
 
-footer ul {
+.footer__all ul {
     display: flex;
 }
 
-footer ul li {
+.footer__all ul li {
     margin: 0 1rem;
 }
 
-footer h4, h5 {
+.footer__all h4, h5 {
     color: #eee4e1;
     font-weight: normal;
 }
 
-footer a {
+.footer__all a {
     color: #fb6f92;
     transition: .2s ease-in;
 }
 
-footer a:hover{
+.footer__all a:hover{
     color: #0fa3b1;
 }
 
-/* --ABOUT-- */
+/* --- --- --- CONTACT --- --- --- */
 
-#contact-main {
+.main__contact {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-areas:
@@ -125,13 +131,13 @@ footer a:hover{
     padding: 1rem 3rem;
     height: 70vh;
 }
-#contact-main h1 {
+.main__contact h1 {
     grid-area: h1;
     text-align: center;
     padding-bottom: 1.5rem;
 }
 
-#contact-main span {
+.main__contact span {
     color: #fb6f92;
 }
 
@@ -141,7 +147,8 @@ footer a:hover{
 }
 
 .location iframe {
-    box-shadow: 1rem #0069d9;
+    width: 100%;
+    aspect-ratio: 16/9;
 }
 
 .form {
@@ -174,19 +181,22 @@ footer a:hover{
     background-color: #0069d9;
 }
 
-/* --CONTACT-- */
-
-#about-main {
+/* --- --- --- ABOUT --- --- --- */
+.main__about {
     background-color: #ffd6ff;
     padding: 1rem 3rem;
 }
 
-#about-main h1, p {
+.main__about h1, p {
     text-align: center;
     margin-bottom: 1.3rem;
 }
 
-#about-main span {
+.main__about h1, .main__contact h1 {
+    text-transform: uppercase;
+}
+
+.main__about span {
     color: #0fa3b1;
 }
 
@@ -216,7 +226,7 @@ footer a:hover{
     justify-content: space-evenly;
 }
 
-/* -- LOGIN / SINGUP */
+/* --- --- --- LOGIN / SIGNUP --- --- --- */
 #index-login, #index-signup {
     background-color: #ffd6ff;
     padding: 1rem 3rem;

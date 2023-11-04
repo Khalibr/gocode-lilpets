@@ -13,6 +13,8 @@
     <link rel="icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
     <!-- css -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/acd588de27.js" crossorigin="anonymous"></script>
     <title>contact</title>
 </head>
 
@@ -20,11 +22,11 @@
     <!-- cabecera -->
     <header>
         <!-- logo e info del sitio -->
-        <a href="../index.html" class="logo-header">
+        <a href="../index.html" class="header__logo">
             <img src="../assets/img/images/logo-nav.png" alt="mi imagen para el logo">
         </a>
         
-        <nav class="menu-nav">
+        <nav class="navbar">
             <ul>
                 <li><a href="../index.html">home</a></li>
                 <li><a href="#">service</a></li>
@@ -34,7 +36,7 @@
             </ul>
         </nav>
     </header>
-    <main id="contact-main">
+    <main class="main__contact">
         <h1>Contact <span>•</span> Us</h1>
 
         <section class="location">
@@ -43,7 +45,7 @@
 
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d806.1650894600476!2d-115.01596137148653!3d36.07738749827171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8d0b89793735f%3A0x82738f1bb7cadcb8!2s712%20Red%20Bark%20Ln%2C%20Henderson%2C%20NV%2089011%2C%20EE.%20UU.!5e0!3m2!1ses!2sar!4v1697817244751!5m2!1ses!2sar"
-                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
         <section class="form">
@@ -55,19 +57,19 @@
                 <label for="email">eMail:</label>
                 <input type="email" name="email" id="email" required>
                 <textarea name="message" id="message" rows="5" required></textarea>
-                <button type="submit">Submit</button>
+                <button>Submit</button>
             </form>
         </section>
 
     </main>
     <!-- pie -->
-    <footer>
+    <footer class="footer__all">
         <!-- info de rederes y enlances -->
         <h4>Seguime en las Redes Sociales</h4>
         <ul>
-            <li><a href="#">Instagram</li>
-            <li><a href="#">Facebook</li>
-            <li><a href="#">Twitter</li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></li>
+            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></li>
         </ul>
         <h5>Copyright &copy; LilPet's 2023</h5>
     </footer>
