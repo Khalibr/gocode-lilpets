@@ -44,10 +44,27 @@ header {
     text-decoration: underline #0fa3b1 0.3rem;
 }
 
+.navbar__button{
+    padding: .45rem 1.5rem;
+    border-radius: .25rem;
+    background-color: #007bff;
+    transition: background-color .15s ease-in-out;
+}
+
+.navbar__button:hover{
+    background-color:#2d93ff;
+}
+
+.navbar__button a {
+    text-transform: uppercase;
+    color: #bde0fe;
+    font-weight: 800;
+}
+
 
 /* MAIN */
 main {
-    box-shadow: 0 0 1.5rem black;
+    box-shadow: 0 0 1.5rem #000000;
 }
 
 .main__index {
@@ -95,6 +112,7 @@ main {
     align-items: center;
     padding: 1rem 0;
     background-color: #212529;
+    height: 20vh;
 }
 
 .footer__all ul {
@@ -166,7 +184,7 @@ main {
     border-radius: .25rem;
 }
 
-.contact-form button {
+.form__btn {
     text-align: center;
     width: 50%;
     margin: 1rem auto;
@@ -177,7 +195,7 @@ main {
     transition: background-color .15s ease-in-out;
 }
 
-.contact-form button:hover{
+.form__btn:hover {
     background-color: #0069d9;
 }
 
@@ -185,6 +203,7 @@ main {
 .main__about {
     background-color: #ffd6ff;
     padding: 1rem 3rem;
+    height: 70vh;
 }
 
 .main__about h1, p {
@@ -226,48 +245,114 @@ main {
     justify-content: space-evenly;
 }
 
-/* --- --- --- LOGIN / SIGNUP --- --- --- */
-#index-login, #index-signup {
+/* --- --- --- LOGIN --- --- --- */
+.main__login, .main__signup {
     background-color: #ffd6ff;
     padding: 1rem 3rem;
     height: 70vh;
-
     background-image: url(../img/images/background-login.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.pic-login, .pic-signup {
+.pic-login {
     margin: 2rem;
     width: 25rem;
-    border-radius: 10%;
+    border-radius: 2rem;
 }
 
-#index-login .login {
+.section__main {
     display: flex;
     background: #0069d975;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 
-.section-login {
+.section__login {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
     background-color: #0069d9;
-    margin: 1rem;
-    width: 50rem;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 2rem;
+    color: white;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+}
+
+.login__form input {
+    border-radius: .3rem;
+    padding: .5rem;
+}
+.login__form--btn{
+    margin-top: 1rem;
+    border-radius: 2rem ;
+    padding: .4rem;
+    border: #bde0fe solid .125rem;
+    color: #bde0fe;
+    font-weight: 800;
+    font-size: 1rem;
+    background-color: #0069d9;
+    transition: .5s ease-in-out;
+}
+
+.login__form--btn:hover{
+    background-color: #bde0fe;
+    color: #0069d9;
+}
+
+
+/* --- --- --- SIGNUP --- --- --- */
+
+.section__signup {
+    background-color: #cdb4db9c;
+}
+
+.main__signup{
+    background-image: url(../img/images/background-signup.png);
+}
+
+.section--signup{
+    background-color: #9d64ec;
+    height: 25rem;
+    width: 25rem;
+}
+
+.form--signup{
+    width: 20rem;
+}
+
+.form--accepts{
+    font-size: x-small;
+    margin: .9rem 0;
+}
+
+.btn {
+    background-color: #9d64ec;
+}
+
+.btn:hover {
+    background-color: #af7ff1;
+}
+
+.btn a {
+    color: #ffffff;
+}
+
+.pic-signup{
+    margin: 2rem;
+    width: 35rem;
     border-radius: 2rem;
 }
 
-.section-login h2 {
-    color: white;
-}
-.login-form {
-    display: flex;
-    flex-direction: column;
-    height: 5rem;
-}
+/* continuar el boton de signup */

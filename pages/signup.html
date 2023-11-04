@@ -21,44 +21,46 @@
     <!-- cabecera -->
     <header>
         <!-- logo del sitio -->
-        <a href="../index.html" class="logo-header">
+        <a href="../index.html" class="header__logo">
             <img src="../assets/img/images/logo-nav.png" alt="mi imagen para el logo">
         </a>
 
         <!-- barra de navegacion -->
-        <nav class="menu-nav">
+        <nav class="navbar">
             <ul>
                 <li><a href="../index.html">home</a></li>
                 <li><a href="#">service</a></li>
                 <li><a href="./contact.html">contact</a></li>
                 <li><a href="./about.html">about</a></li>
-                <li><a href="./login.html">login</a></li>
             </ul>
         </nav>
+        <button class="navbar__button"><a href="./login.html">login</a></button>
     </header>
     <!-- contenido principal -->
-    <main id="index-signup">
+    <main class="main__signup">
         <!-- seccion de registro -->
-        <section class="signup">
-            <img class="pic-signup" src="/assets/img/images/registro.jpg" alt="imagen de registro de cuenta">
-            <h2>Login you account</h2>
-            <form action="">
-                <label for="name">Username</label>
-                <input type="text" id="username" name="username" required>
-                <label for="email">eMail</label>
-                <input type="email" id="email" name="email" required>
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" required>
-                <label>
-                    <input type="checkbox" name="accept_terms" required>
-                    I have read and accept the terms and conditions.
-                </label>
-                <button type="submit">Create Account</button>
-            </form>
+        <section class="section__main section__signup">
+            <section class="section__login section--signup">
+                <h2>Hi!👋🏼 Welcome</h2>
+                <form action="" class="login__form form--signup">
+                    <label for="name">Username</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="email">eMail</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" required>
+                    <label class="form--accepts" for="accept_terms">
+                        <input type="checkbox" name="accept_terms" required>
+                        I have read and accept the terms and conditions.
+                    </label>
+                    <button>Create Account</button>
+                </form>
+            </section>
+            <img class="pic-signup" src="/assets/img/images/registro.png" alt="imagen de registro de cuenta">
         </section>
     </main>
     <!-- pie -->
-    <footer>
+    <footer class="footer__all">
         <!-- info de rederes y enlances -->
         <h4>Seguime en las Redes Sociales</h4>
         <ul>
@@ -66,6 +68,7 @@
             <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
             <li><a href="#"><i class="fa-brands fa-twitter"></i></li>
         </ul>
+        <h5>Copyright &copy; LilPet's 2023</h5>
     </footer>
 </body>
 
