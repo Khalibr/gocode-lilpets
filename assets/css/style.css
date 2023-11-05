@@ -248,7 +248,7 @@ main {
 /* --- --- --- LOGIN --- --- --- */
 .main__login, .main__signup {
     background-color: #ffd6ff;
-    padding: 1rem 3rem;
+    /* padding: 1rem 3rem; */
     height: 70vh;
     background-image: url(../img/images/background-login.png);
     background-size: cover;
@@ -264,7 +264,7 @@ main {
 
 .section__main {
     display: flex;
-    background: #0069d975;
+    background: #54a7ff49;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
@@ -277,7 +277,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #0069d9;
+    background-color: #0069d9ee;
     width: 20rem;
     height: 20rem;
     border-radius: 2rem;
@@ -295,27 +295,27 @@ main {
     padding: .5rem;
 }
 .login__form--btn{
-    margin-top: 1rem;
+    width: 6rem;
+    margin: 1rem auto;
     border-radius: 2rem ;
     padding: .4rem;
-    border: #bde0fe solid .125rem;
-    color: #bde0fe;
+    color: #ffcdb2;
     font-weight: 800;
     font-size: 1rem;
-    background-color: #0069d9;
+    background-color: #f07167;
     transition: .5s ease-in-out;
 }
 
-.login__form--btn:hover{
-    background-color: #bde0fe;
-    color: #0069d9;
+.login__form--btn:hover {
+    width: 8rem;
+    color:#ffffff;
 }
 
 
 /* --- --- --- SIGNUP --- --- --- */
 
 .section__signup {
-    background-color: #cdb4db9c;
+    background-color: #ddcae79c;
 }
 
 .main__signup{
@@ -323,7 +323,7 @@ main {
 }
 
 .section--signup{
-    background-color: #9d64ec;
+    background-color: #9d64ece8;
     height: 25rem;
     width: 25rem;
 }
@@ -355,4 +355,12 @@ main {
     border-radius: 2rem;
 }
 
-/* continuar el boton de signup */
+.btn--signup {
+    width: 13rem;
+    background-color: #ffc300;
+    color: #77532e;
+}
+
+.btn--signup:hover {
+    width: 15rem;
+}
