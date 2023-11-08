@@ -9,7 +9,6 @@
     text-decoration: none;
     border: none;
     scroll-behavior: smooth;
-    overflow: hidden;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -112,7 +111,8 @@ main {
     align-items: center;
     padding: 1rem 0;
     background-color: #212529;
-    height: 20vh;
+    /* height: 20vh; */
+    height: auto;
 }
 
 .footer__all ul {
@@ -367,3 +367,34 @@ main {
 
 
 /* crear pag de doctor, user, y dashboard */
+
+/* --- --- --- SERVICES --- --- --- */
+.main__services {
+    height: auto;
+}
+
+.services__cards img{
+    width: 3rem;
+    height: 3rem;
+}
+
+.services__cards h2 {
+    font-size: 1.25rem;
+}
+
+.services__cards p {
+    font-size: .9rem;
+}
+
+.services__cards {
+    border: 1px red solid;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services__container{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
