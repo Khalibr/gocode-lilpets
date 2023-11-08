@@ -387,7 +387,7 @@ main {
 }
 
 .services__cards {
-    border: 1px red solid;
+    /* border: 1px red solid; */
     margin: 1rem;
     display: flex;
     flex-direction: column;
