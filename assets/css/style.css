@@ -343,7 +343,7 @@ summary::before, summary::after {
 }
 
 .main__about span {
-    color: var(--font-color-skyblue);
+    color: var(--font-color-pink);
 }
 
 .row {
@@ -496,8 +496,84 @@ summary::before, summary::after {
 }
 
 
+/* --- --- --- DASHBOARD --- --- --- */
 
+.main__dashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+}
 
-/* continuar con details, sumary. crear variables para colores, background con texturas, img. toques finales ahrre */
+.dashboard__aside {
+    display: flex;
+    flex-direction: column;
+    height: 66vh;
+    max-width: 25%;
+    padding: 1rem;
+    border-right: .125rem solid #000000;
+} /* cambiar el borde negro a otro color*/
 
-/* --- --- --- PAGE --- --- --- */
+.dashboard__aside h2 {
+    border-bottom: .125rem solid #000000;
+    margin-bottom: 5rem;
+}
+
+.dashboard__aside ul{
+    margin-bottom: 2rem;
+}
+
+.aside__manu li a {
+    color: var(--bg-color-footer);
+}
+
+.aside__manu li a:hover {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.aside__manu li a:focus {
+    font-weight: bold;
+}
+
+.btn-logout {
+    background-color: var(--bg-second-color);
+    border-radius: 2rem;
+    width: 5rem;
+    height: 2rem;
+    margin: 0 auto;
+    transition: .5s ease-in;
+}
+
+.btn-logout a {
+    color: #000000;
+}
+
+.btn-logout:hover{
+    width: 7rem;
+}
+
+/* tools */
+.dashboard__tools {
+    display: flex;
+    flex-direction: column;
+    height: 66vh;
+    width: 100%;
+}
+
+.tools__profile {
+    flex: 0 0 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
+
+.tools__gestion {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+}
+
+/* darle una vuelta mas de rosca */
