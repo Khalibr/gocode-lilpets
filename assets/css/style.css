@@ -1,6 +1,20 @@
 /* import font-google popping-400*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
 
+:root {
+    /* paleta de colores de background */
+    --bg-primary-color: #ffd6ff;
+    --bg-second-color: #bde0fe;
+    --bg-color-footer: #212529;
+
+    /* colores para texto */
+    --font-color-pink: #fb6f92;
+    --font-color-skyblue: #0fa3b1;
+    --font-color-black: #212529;
+
+    /* colores para botones */
+    --btn-color-login: #f07167;
+}
 /* normalize */
 *{
     margin: 0;
@@ -61,13 +75,13 @@ header {
 }
 
 
-/* MAIN */
+/* --- --- --- INDEX --- --- --- */
 main {
     box-shadow: 0 0 1.5rem #000000;
 }
 
 .main__index {
-    background-color: #ffd6ff;
+    background-color: var(--bg-primary-color);
     padding: 1rem 3rem;
     height: 70vh;
 }
@@ -88,14 +102,14 @@ main {
 }
 .main__banner h1 {
     font-size: 6rem;
-    color: #fb6f92;
+    color: var(--font-color-pink);
 }
 .main__banner span {
-    color: #212529;
+    color: var(--font-color-black);
 }
 .main__banner h2 {
     font-size: 1.5rem;
-    color: #0fa3b1;
+    color: var(--font-color-skyblue) ;
     margin-bottom: -2rem;
 }
 
@@ -110,8 +124,7 @@ main {
     flex-direction: column;
     align-items: center;
     padding: 1rem 0;
-    background-color: #212529;
-    /* height: 20vh; */
+    background-color: var(--bg-color-footer);
     height: auto;
 }
 
@@ -137,6 +150,114 @@ main {
     color: #0fa3b1;
 }
 
+
+/* --- --- --- SERVICES --- --- --- */
+
+.main__services {
+    padding: 1rem 3rem;
+    background-color: var(--bg-second-color);
+}
+
+.main__services span {
+    color: var(--font-color-pink);
+}
+
+/* section services */
+.services__category{
+    height: auto;
+    background-color: #0000002f;
+    border-radius: 2rem;
+}
+.category__container{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+
+.services__cards {
+    margin: 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.services__cards img{
+    width: 3rem;
+    height: 3rem;
+}
+
+.services__cards h2 {
+    font-size: 1.25rem;
+    padding: .313rem 0;
+}
+
+.services__cards p {
+    font-size: .9rem;
+}
+
+/* section faq */
+.faq {
+    margin: 5rem;
+
+}
+.faq h2 {
+    text-align: center;
+}
+
+
+/* style details - summary */
+
+details {
+    padding: .6rem;
+    border-radius: 0.5rem;
+    background-color: #0fa3b1;
+    width: 50rem;
+    margin: .5rem auto;
+    cursor: pointer;
+}
+
+details p {
+    width: 90%;
+    text-align: left;
+    margin: .5rem 1.5rem;
+}
+
+summary {
+    position: relative;
+    font-weight: 800;
+    color:#dee2ff;
+}
+summary::marker {
+    content: none;
+}
+summary::before,
+summary::after {
+    content:'';
+}
+
+summary::before, summary::after {
+    width: .75rem;
+    border-bottom: .125rem solid;
+    position: absolute;
+    top: .7rem;
+    right: .7rem;
+}
+
+summary::after {
+    transform: rotate(90deg);
+}
+
+details[open] summary::after {
+    transform: rotate(0deg);
+}
+
+summary::before, summary::after {
+    transition: .5s;
+}
+
+
 /* --- --- --- CONTACT --- --- --- */
 
 .main__contact {
@@ -145,7 +266,7 @@ main {
     grid-template-areas:
     "h1 h1"
     "section-location form";
-    background-color: #bde0fe;
+    background-color: var(--bg-primary-color);
     padding: 1rem 3rem;
     height: 70vh;
 }
@@ -156,7 +277,7 @@ main {
 }
 
 .main__contact span {
-    color: #fb6f92;
+    color: var(--font-color-skyblue);
 }
 
 .location {
@@ -180,7 +301,12 @@ main {
     width: 90%;
     flex-direction: column;
     justify-content: center;
-    padding: .375rem .75rem;
+}
+
+.contact-form input, textarea {
+    margin-top: 1rem;
+    padding: .5rem;
+    font-size: 1rem;
     border-radius: .25rem;
 }
 
@@ -201,22 +327,23 @@ main {
 
 /* --- --- --- ABOUT --- --- --- */
 .main__about {
-    background-color: #ffd6ff;
+    background-color: var(--bg-second-color);
     padding: 1rem 3rem;
     height: 70vh;
 }
 
-.main__about h1, p {
+.main__title {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1.3rem;
+}
+.main__about p {
     text-align: center;
     margin-bottom: 1.3rem;
 }
 
-.main__about h1, .main__contact h1 {
-    text-transform: uppercase;
-}
-
 .main__about span {
-    color: #0fa3b1;
+    color: var(--font-color-skyblue);
 }
 
 .row {
@@ -245,6 +372,9 @@ main {
     justify-content: space-evenly;
 }
 
+.card h5 {
+    font-size: 1.5rem;
+}
 /* --- --- --- LOGIN --- --- --- */
 .main__login, .main__signup {
     background-color: #ffd6ff;
@@ -366,109 +496,8 @@ main {
 }
 
 
-/* --- --- --- SERVICES --- --- --- */
 
-/* section services */
-.services__category{
-    height: auto;
-    background-color: #d9d9d9; /* cambiar */
-}
-
-.main__services h1{
-    text-align: center;
-    margin-bottom: 1.3rem;
-}
-
-.category__container{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-}
-
-.services__cards {
-    margin: 2rem;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    border: 0.125rem solid #fff;
-}
-
-.services__cards img{
-    width: 3rem;
-    height: 3rem;
-}
-
-.services__cards h2 {
-    font-size: 1.25rem;
-    text-align: center;
-    padding: .313rem 0;
-}
-
-.services__cards p {
-    font-size: .9rem;
-}
-
-/* section faq */
-.faq {
-    background-color: #cbc0d3;
-    padding: 1rem 0;
-
-}
-.faq h2 {
-    text-align: center;
-}
-
-
-/* style details - summary */
-
-details {
-    padding: .6rem;
-    border-radius: 0.5rem;
-    background-color: #0fa3b1;
-    width: 50rem;
-    margin: .5rem auto;
-    cursor: pointer;
-}
-
-details p {
-    width: 90%;
-    text-align: left;
-    /* border: 1px solid red; */
-    margin: .5rem 1.5rem;
-}
-
-summary {
-    position: relative;
-    font-weight: 800;
-    color:#dee2ff;
-}
-summary::marker {
-    content: none;
-}
-summary::before,
-summary::after {
-    content:'';
-}
-
-summary::before, summary::after {
-    width: .75rem;
-    border-bottom: .125rem solid;
-    position: absolute;
-    top: .7rem;
-    right: .7rem;
-}
-
-summary::after {
-    transform: rotate(90deg);
-}
-
-[open] summary::after {
-    transform: rotate(0deg);
-}
-
-summary::before, summary::after {
-    transition: .5s;
-}
 
 /* continuar con details, sumary. crear variables para colores, background con texturas, img. toques finales ahrre */
+
+/* --- --- --- PAGE --- --- --- */
