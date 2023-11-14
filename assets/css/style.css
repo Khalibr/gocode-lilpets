@@ -115,6 +115,7 @@ main {
 }
 .main__section-button button {
     width: 8rem;
+    font-size: 1rem;
     margin: 1rem;
     padding: .5rem;
     border: .065rem solid #000;
@@ -124,12 +125,26 @@ main {
     transition: .3s ease;
 }
 
+.main__section-button button:nth-child(2){
+    background-color: #fff;
+    border: .065rem solid #c8c8c8;
+}
+
+.main__section-button button:nth-child(2) a{
+    color: #000;
+} 
+
 .main__section-button a {
     color: #fff;
 }
 
 .main__section-button button:hover {
     box-shadow: 0 0 .7rem #000;
+}
+
+.main__section-button button:nth-child(2):hover{
+    box-shadow: none;
+    border: 1px solid #707070;
 }
 
 
