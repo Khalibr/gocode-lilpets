@@ -83,7 +83,7 @@ main {
 .main__banner {
     background-color: var(--bg-primary-color);
     height: 45vh;
-    background-image: url(../img/biel-morro-bsSIk3LV_NE-unsplash.jpg);
+    background-image: url(../img/images/banner-index.png);
     background-position: 50% 55%;
     background-size: cover;
 }
