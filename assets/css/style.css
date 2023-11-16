@@ -1,5 +1,5 @@
 /* import font-google poppins*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;800&family=Poppins:wght@100;400;800&display=swap');
 
 :root {
     /* paleta de colores de background */
@@ -14,6 +14,15 @@
 
     /* colores para botones */
     --btn-color-login: #f07167;
+
+    /*Paleta para Dashboard*/
+    --orange:#f4a261;
+    --black: #212529;
+    --white: #fff;
+    --pink: #fb6f92;
+    --grey: #505050;
+    --sd-grey: #999;
+    --tr-grey: #e2e2e2;
 }
 /* normalize */
 *{
@@ -236,6 +245,26 @@ main {
     text-align: center;
 }
 
+.faq i {
+    color: var(--font-color-pink);
+}
+.faq details:nth-last-child(1) a {
+    color: #fff;
+    animation: beatFade 1s ease-in-out infinite;
+    font-weight: bold;
+}
+
+@keyframes beatFade {
+    0% {
+    opacity: 1;
+}
+    50% {
+    opacity: 0.5;
+}
+    100% {
+    opacity: 1;
+}
+}
 
 /* style details - summary */
 
@@ -526,84 +555,156 @@ summary::before, summary::after {
 }
 
 
-/* --- --- --- DASHBOARD --- --- --- */
+/* --- --- --- DASHBOARD HOME --- --- --- */
 
+/* MAIN */
 .main__dashboard {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 3rem;
 }
-
+/* --- Barra lateral --- */
+.dashboard__aside *{
+    display: flex;
+    flex-direction: column;
+}
 .dashboard__aside {
-    display: flex;
-    flex-direction: column;
-    height: 66vh;
-    max-width: 25%;
+    width: 20%;
+    height: 100vh;
     padding: 1rem;
-    border-right: .125rem solid #000000;
-} /* cambiar el borde negro a otro color*/
-
-.dashboard__aside h2 {
-    border-bottom: .125rem solid #000000;
-    margin-bottom: 5rem;
+    background-color: var(--black);
 }
 
-.dashboard__aside ul{
-    margin-bottom: 2rem;
-}
-
-.aside__manu li a {
-    color: var(--bg-color-footer);
-}
-
-.aside__manu li a:hover {
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.aside__manu li a:focus {
-    font-weight: bold;
-}
-
-.btn-logout {
-    background-color: var(--bg-second-color);
-    border-radius: 2rem;
-    width: 5rem;
-    height: 2rem;
+/* logo de la barra lateral */
+.aside-logo {
+    width: 30%;
     margin: 0 auto;
-    transition: .5s ease-in;
 }
 
-.btn-logout a {
-    color: #000000;
+/* --- container del usuario --- */
+.aside__user-row {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--grey);
+    padding: .5rem 0;
+    margin: 1rem 0;
+    border-radius: 1rem;
+}
+/* usuario-icono de huella */
+.fa-paw{
+    font-size: 1.2rem;
+    padding: .5rem;
+    border: .125rem solid #f4a261;
+    background-color: #f4a261;
+    color: #fff;
+    border-radius: 50%;
+}
+/* usuario admin */
+.aside__user-column h2 {
+    color: var(--white);
+    font-size: medium;
+    font-weight: normal;
+}
+/* usuario gmail */
+.aside__user-column span {
+    color: var(--sd-grey);
+    font-size: small;
+}
+/* usuario icono logout */
+.aside__user-row > a > i {
+    font-size: 1.2rem;
+    padding: .2rem;
+    border: .125rem solid var(--black) ;
+    background-color: var(--black);
+    color: var(--pink);
+    border-radius: 50%;
 }
 
-.btn-logout:hover{
-    width: 7rem;
+/* --- Menu --- */
+.aside__menu h5 {
+    color: var(--grey);
+    text-transform: uppercase;
+    opacity: 50%;
+    margin: 1.5rem 0;
+}
+/* menu- link de la lista */
+.aside__menu li a {
+    flex-direction: row;
+}
+/* menu-links */
+.aside__menu a {
+    color: var(--grey);
+    font-weight: bold;
+}
+/* menu-iconos */
+.aside__menu i {
+    width: 2rem;
+    align-items: center;
+}
+.aside__menu i,
+.aside__menu a {
+    font-size: 1.2rem;
+}
+.aside__menu a:focus {
+    color: var(--white);
+}
+.aside__menu a:focus i {
+    color: var(--pink);
+}
+.aside__menu a i{
+    margin-right: 2rem;
 }
 
-/* tools */
-.dashboard__tools {
+/* --- ventana derecha --- */
+.dashboard__windows{
     display: flex;
     flex-direction: column;
-    height: 66vh;
     width: 100%;
 }
 
-.tools__profile {
-    flex: 0 0 10%;
+.windows-navbar {
+    padding: .5rem;
+}
+.windows-navbar i {
+    position: absolute;
+    margin-top: .3rem;
+    opacity: 50%;
+}
+.windows-navbar input {
+    width: 90%;
+    outline: none;
+    margin-left: 1.5rem;
+}
+
+/* --- contenedor del home --- */
+.windows-container{
+    opacity: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: center;
     justify-content: center;
+    padding: 0 3rem;
+    text-align: center;
+}
+.windows-container h1{
+    font-size: 4rem;
+    font-family: 'Playfair Display', serif;
+}
+.windows-container p {
+    margin: 2rem 0;
 }
 
-.tools__gestion {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    place-items: center;
+.windows-container img {
+    width: 30%;
 }
 
-/* darle una vuelta mas de rosca */
+.dashboard__footer {
+    color: var(--black);
+    text-align: center;
+    border-top: .125rem solid var(--sd-grey);
+    width: 100%;
+    opacity: 70%;
+}
+
+/* border: 1px solid red; */
+/* --- --- --- DASHBOARD-DOCTORS --- --- --- */

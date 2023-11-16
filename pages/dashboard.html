@@ -14,76 +14,54 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/acd588de27.js" crossorigin="anonymous"></script>
-    <title>dashboard</title>
+    <title>dashboard home</title>
 </head>
 
 <body>
-    <!-- cabecera -->
-    <header>
-        <!-- logo e info del sitio -->
-        <a href="../index.html" class="header__logo">
-            <img src="../assets/img/images/logo-nav.png" alt="mi imagen para el logo">
-        </a>
-
-        <nav class="navbar">
-            <ul>
-                <li><a href="../index.html">home</a></li>
-                <li><a href="./service.html">service</a></li>
-                <li><a href="./contact.html">contact</a></li>
-                <li><a href="#">about</a></li>
-            </ul>
-        </nav>
-        <button class="navbar__button"><a href="./login.html">login</a></button>
-    </header>
-
     <!-- contenido principal -->
     <main class="main__dashboard">
-        <section class="dashboard__aside">
-            <h2>Welcome</h2>
-
-            <ul class="aside__manu">
-                <li><a href="#">General</a></li>
-                <li><a href="#">Users</a></li>
-                <li><a href="#">Doctors</a></li>
-                <li><a href="#">Slot</a></li>
-            </ul>
-
-            <button class="btn-logout">
-                <a href="#">Log Out</a>
-            </button>
-        </section>
-
-        <section class="dashboard__tools">
-            <div class="tools__profile">
-                <h2><i class="fa-solid fa-hammer"></i> Admin</h2>
-                <span>admin@gmail.com</span>
+        <!-- Barra Lateral -->
+        <aside class="dashboard__aside">
+            <!-- logo del sitio -->
+            <img class="aside-logo" src="../assets/img/images/logo-dashboard.png" alt="mi imagen para el logo">
+            
+            <div class="aside__user-row">
+                <i class="fa-solid fa-paw"></i>
+                <div class="aside__user-column">
+                    <h2>Admin</h2>
+                    <span>Admin@gmai.com</span>
+                </div>
+                <a href="../index.html"><i class="fa-solid fa-right-from-bracket"></i></a>
             </div>
-
-            <div class="tools__gestion">
-                <i class="fa-solid fa-gear">config</i>
-                <i class="fa-solid fa-gear">config2</i>
-                <i class="fa-solid fa-gear">config2</i>
-                <i class="fa-solid fa-gear">config2</i>
-                <i class="fa-solid fa-gear">config2</i>
-                <i class="fa-solid fa-gear">config2</i>
+            <section class="aside__menu">
+                <h5>Crud</h5>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-hospital-user"></i>Doctors</a></li>
+                    <li><a href="#"><i class="fa-solid fa-user-plus"></i>Clients</a></li>
+                    <li><a href="#"><i class="fa-solid fa-hippo"></i>Animals</a></li>
+                </ul>
+                <h5>Other</h5>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-calendar-days"></i>Calendar</a></li>
+                    <li><a href="#"><i class="fa-solid fa-gear"></i>Settings</a></li>
+                </ul>
+            </section>
+        </aside>
+        <section class="dashboard__windows">
+            <!-- <header class="windows-navbar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" name="search" id="search" placeholder="Search for LilPet's...">
+            </header> -->
+            <div class="windows-container">
+                <h1>System LilPet's</h1>
+                <p><strong>System LilPet's</strong> welcomes you and provides top-notch veterinary services. You will find a range of services, including user and patient registration and management, specialized medical history, hospitalization, appointment scheduling, and all the necessary care for your pet. We are dedicated to delivering quality and the utmost attention because the well-being of our animals is our top priority.</p>
+                <img src="../assets/img/images/home-dashboard.png" alt="logo gato y perro de lilPet">
             </div>
+            <footer class="dashboard__footer">
+                <p>Copyright &copy; LilPet's 2023</p>
+            </footer>
         </section>
     </main>
-    <!-- pie -->
-    <footer class="footer__all">
-        <!-- info de rederes y enlances -->
-        <h4>Follow in the Social Networks</h4>
-        <ul>
-            <li><a href="#"><i class="fa-brands fa-instagram"></i></li>
-            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-twitter"></i></li>
-            <li><a href="https://www.linkedin.com/in/julianmedinaok/" target="_blank"><i
-                        class="fa-brands fa-linkedin-in"></i></li>
-            <li><a href="https://api.whatsapp.com/send?phone=5491167527018&text=Buenos días, me gustaría programar una cita para una revisión de rutina para mi mascota. ¿Cuándo tienen disponibilidad?"
-                    target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
-        </ul>
-        <h5>Copyright &copy; LilPet's 2023</h5>
-    </footer>
 </body>
 
 </html>
