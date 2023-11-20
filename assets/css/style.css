@@ -23,6 +23,16 @@
     --grey: #505050;
     --sd-grey: #999;
     --tr-grey: #e2e2e2;
+    
+    /* paleta para botones dashboard */
+    --crud-orange:#f4a261;
+    --crud-black: #212529;
+    --crud-white: #fff;
+    --crud-pink: #fb6f92;
+    --crud-grey: #505050;
+    --crud-sd-grey: #999;
+    --crud-tr-grey: #e2e2e2;
+    --btn-green: #90be6d;
 }
 /* normalize */
 *{
@@ -663,6 +673,7 @@ summary::before, summary::after {
 
 .windows-navbar {
     padding: .5rem;
+    height: 10%;
 }
 .windows-navbar i {
     position: absolute;
@@ -706,5 +717,58 @@ summary::before, summary::after {
     opacity: 70%;
 }
 
-/* border: 1px solid red; */
 /* --- --- --- DASHBOARD-DOCTORS --- --- --- */
+.crud{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.crud h2 {
+    color: var(--grey);
+    border-bottom: .063rem solid var(--sd-grey);
+    font-size: 2rem;
+}
+
+/* estilos para el formulario de registro doctores */
+.crud form {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    gap: 0 1rem;
+}
+.crud form input,
+.crud form select {
+    margin: 1rem 0;
+    border: .125rem solid var(--crud-sd-grey);
+    padding: .25rem;
+}
+.crud form select{
+    color: var(--crud-grey);
+}
+
+.crud-btn{
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-end;
+}
+.crud-btn button{
+    margin-left: .5rem;
+    width: 4rem;
+    height: 2rem;
+    border: .063rem solid var(--sd-grey);
+    border-radius: .25rem;
+    color: var(--black);
+}
+.crud-btn button:first-child {
+    color: var(--white);
+    background-color: var(--btn-green);
+    border: .063rem solid var(--btn-green);
+}
+
+/* --- --- --- DASHBOARD-CLIENTS --- --- --- */
+/* border: 1px solid red; */
