@@ -717,7 +717,7 @@ summary::before, summary::after {
     opacity: 70%;
 }
 
-/* --- --- --- DASHBOARD-DOCTORS --- --- --- */
+/* --- --- --- DASHBOARD --- --- --- */
 .crud{
     display: flex;
     flex-direction: column;
@@ -729,10 +729,11 @@ summary::before, summary::after {
 .crud h2 {
     color: var(--grey);
     border-bottom: .063rem solid var(--sd-grey);
+    margin-bottom: 2rem;
     font-size: 2rem;
 }
 
-/* estilos para el formulario de registro doctores */
+/* estilos para el formulario de registro */
 .crud form {
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -750,7 +751,14 @@ summary::before, summary::after {
 .crud form select{
     color: var(--crud-grey);
 }
-
+.crud form label {
+    color: var(--crud-grey);
+}
+.crud form h4 {
+    grid-column: span 2;
+    color: var(--crud-grey);
+    margin-top: 1rem;
+}
 .crud-btn{
     grid-column: span 2;
     display: flex;
@@ -770,5 +778,7 @@ summary::before, summary::after {
     border: .063rem solid var(--btn-green);
 }
 
-/* --- --- --- DASHBOARD-CLIENTS --- --- --- */
+/* --- --- --- DASHBOARD-SETTINGS --- --- --- */
+
+
 /* border: 1px solid red; */

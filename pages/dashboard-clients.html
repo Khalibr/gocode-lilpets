@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/acd588de27.js" crossorigin="anonymous"></script>
-    <title>dashboard animals</title>
+    <title>dashboard clients</title>
 </head>
 
 <body>
@@ -39,8 +39,8 @@
             <section class="aside__menu">
                 <h5>Crud</h5>
                 <ul>
-                    <li><a href="./dashboard-clients.html"><i class="fa-solid fa-user-plus"></i>Clients</a></li>
-                    <li><a href="#"><i class="fa-solid fa-hippo"></i>Animals</a></li>
+                    <li><a href="#"><i class="fa-solid fa-user-plus"></i>Clients</a></li>
+                    <li><a href="./dashboard-animals.html"><i class="fa-solid fa-hippo"></i>Animals</a></li>
                     <li><a href="./dashboard-doctors.html"><i class="fa-solid fa-hospital-user"></i>Doctors</a></li>
                 </ul>
                 <h5>Other</h5>
@@ -60,30 +60,22 @@
 
             <!-- Formulario para Agregar Doctor/a -->
             <section class="crud">
-                <h2>New Animal</h2>
+                <h2>New Client</h2>
                 <form action="">
-                    <input type="text" name="name" id="" placeholder="Name..." required>
-                    <select name="specie" id="" required>
-                        <option value="" disabled selected hidden>Select spacie...</option>
-                        <option value="dog">Dog</option>
-                        <option value="cat">Cat</option>
-                        <option value="bird">Bird</option>
-                        <option value="rodent">Rodent</option>
-                        <option value="rabbit">Rabbit</option>
-                        <option value="exotic">Exotic</option>
-                        <option value="other">Other</option>
-                    </select>
-                    <input type="text" name="breed" id="" placeholder="Breed...">
-                    <input type="text" name="owner" id="" placeholder="Owner's name..." required>
-                    <input type="number" name="weight" id="" placeholder="Weight..." required>
-                    <select name="sterilization" id="">
-                        <option value="" disabled selected hidden>Is sterilized?</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
+                    <h4>Personal Information</h4>
+                    <input type="text" name="fullname" id="" placeholder="Full Name..." required>
+                    <input type="email" name="email" id="" placeholder="example@gmail.com..." required>
+                    <input type="tel" name="phone" id="" placeholder="+54 9 011-1234-1234..." required>
                     <label for="age">Date of Birth:
                         <input type="date" name="age" id="age" required>
                     </label>
+                    
+                    <h4>Contact</h4>
+                    <input type="text" name="country" id="" placeholder="Country...">
+                    <input type="text" name="city" id="" placeholder="City...">
+                    <input type="text" name="state" id="" placeholder="State/Province...">
+                    <input type="text" name="addres" id="" placeholder="Adress...">
+                    <input type="number" name="postalcode" id="" placeholder="Postal Code...">
 
                     <div class="crud-btn">
                         <button>add</button>
