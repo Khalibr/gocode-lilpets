@@ -1,4 +1,4 @@
-/* import font-google poppins*/
+/* import font-google | fuentes: Poppins - Playfair*/
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;800&family=Poppins:wght@100;400;800&display=swap');
 
 :root {
@@ -45,7 +45,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* --- --- --- INDEX --- --- --- */
+/*:::: :::: :::: :::: INDEX :::: :::: :::: :::: */
 header {
     display: flex;
     justify-content: space-between;
@@ -54,7 +54,7 @@ header {
 }
 
 
-/* NAVBAR */
+/* NAVBAR menu */
 .header__logo img {
     width: 6rem;
 }
@@ -94,7 +94,7 @@ header {
 }
 
 
-/* --- --- --- INDEX --- --- --- */
+/*:::: :::: :::: :::: INDEX :::: :::: :::: :::: */
 main {
     box-shadow: 0 0 1.5rem #000000;
 }
@@ -144,12 +144,13 @@ main {
     transition: .3s ease;
 }
 
-.main__section-button button:nth-child(2){
+/* ultimo boton seleccionado */
+.main__section-button button:last-child{
     background-color: #fff;
     border: .065rem solid #c8c8c8;
 }
 
-.main__section-button button:nth-child(2) a{
+.main__section-button button:last-child a{
     color: #000;
 } 
 
@@ -161,7 +162,7 @@ main {
     box-shadow: 0 0 .7rem #000;
 }
 
-.main__section-button button:nth-child(2):hover{
+.main__section-button button:last-child:hover{
     box-shadow: none;
     border: 1px solid #707070;
 }
@@ -200,7 +201,7 @@ main {
 }
 
 
-/* --- --- --- SERVICES --- --- --- */
+/*:::: :::: :::: :::: SERVICES :::: :::: :::: :::: */
 
 .main__services {
     padding: 1rem 3rem;
@@ -211,18 +212,16 @@ main {
     color: var(--font-color-pink);
 }
 
-/* section services */
+/* section servicos */
 .services__category{
     height: auto;
     background-color: #0000002f;
     border-radius: 2rem;
-}
-.category__container{
     display: grid;
     grid-template-columns: repeat(5,1fr);
 }
-
-.services__cards {
+/* tarjeta de cada servicio */
+.services__card {
     margin: 2rem;
     padding: 1rem;
     display: flex;
@@ -231,45 +230,46 @@ main {
     justify-content: space-evenly;
     text-align: center;
 }
-
-.services__cards img{
+/* img de la tarjeta */
+.services__card img{
     width: 3rem;
     height: 3rem;
 }
-
-.services__cards h2 {
+/* titulo de la tarjeta */
+.title-card {
     font-size: 1.25rem;
     padding: .313rem 0;
 }
-
-.services__cards p {
+/* descripcion de la tarjeta */
+.description-card {
     font-size: .9rem;
 }
 
-/* section faq */
+/* section faq (preguntas y respuestas) */
 .faq {
     margin: 5rem;
-
 }
-.faq h2 {
+/* titulo de preguntas y respuestas. */
+.title-faq {
     text-align: center;
 }
-
+/* iconos */
 .faq i {
     color: var(--font-color-pink);
 }
-.faq details:nth-last-child(1) a {
+/* efecto de parpadeo para el ultimo anchor */
+.faq details:last-child a {
     color: #fff;
     animation: beatFade 1s ease-in-out infinite;
     font-weight: bold;
 }
-
+/* desarrollo de efecto parpadeo */
 @keyframes beatFade {
     0% {
     opacity: 1;
 }
     50% {
-    opacity: 0.5;
+    opacity: .5;
 }
     100% {
     opacity: 1;
@@ -280,9 +280,9 @@ main {
 
 details {
     padding: .6rem;
-    border-radius: 0.5rem;
+    border-radius: .5rem;
     background-color: #0fa3b1;
-    width: 50rem;
+    width: 60%;
     margin: .5rem auto;
     cursor: pointer;
 }
@@ -293,41 +293,41 @@ details p {
     margin: .5rem 1.5rem;
 }
 
+/* cruces del summary */
 summary {
     position: relative;
     font-weight: 800;
     color:#dee2ff;
 }
+/* ocultar la flecha por defecto del summary */
 summary::marker {
     content: none;
 }
+/* crear cruz */
 summary::before,
 summary::after {
     content:'';
-}
-
-summary::before, summary::after {
     width: .75rem;
     border-bottom: .125rem solid;
     position: absolute;
     top: .7rem;
     right: .7rem;
 }
-
+/* posicion inicial vertical */
 summary::after {
     transform: rotate(90deg);
 }
-
+/* posicion si esta desplegado horizontal */
 details[open] summary::after {
     transform: rotate(0deg);
 }
-
+/* retraso en el movimiento de la cruz */
 summary::before, summary::after {
     transition: .5s;
 }
 
 
-/* --- --- --- CONTACT --- --- --- */
+/*:::: :::: :::: :::: CONTACT :::: :::: :::: :::: */
 
 .main__contact {
     display: grid;
@@ -339,8 +339,9 @@ summary::before, summary::after {
     padding: 1rem 3rem;
     height: 70vh;
 }
-.main__contact h1 {
-    grid-area: h1;
+/* titulo de la pagina */
+.main__title {
+    grid-area: h1; /*pintando area del grid titulo de la pag*/
     text-align: center;
     padding-bottom: 1.5rem;
 }
@@ -348,40 +349,40 @@ summary::before, summary::after {
 .main__contact span {
     color: var(--font-color-skyblue);
 }
-
+/* direccion y telefono */
 .location {
-    grid-area: section-location;
+    grid-area: section-location; /*pintando area del grid a la izquierda*/
     margin: 0 auto;
 }
-
+/* mapa */
 .location iframe {
     width: 100%;
     aspect-ratio: 16/9;
 }
-
+/* seccion del formulario */
 .form {
-    grid-area: form;
+    grid-area: form; /*pintando area del grid a la derecha*/
     display: flex;
     justify-content: center;
 }
-
+/* formulario */
 .contact-form {
     display: flex;
     width: 90%;
     flex-direction: column;
     justify-content: center;
 }
-
+/* estilos para el ingreso de datos y el area de texto */
 .contact-form input, textarea {
     margin-top: 1rem;
     padding: .5rem;
     font-size: 1rem;
     border-radius: .25rem;
 }
-
+/* boton de enviar formulario */
 .form__btn {
     text-align: center;
-    width: 50%;
+    width: 25%;
     margin: 1rem auto;
     padding: .375rem .75rem;
     border-radius: .25rem;
@@ -394,57 +395,59 @@ summary::before, summary::after {
     background-color: #0069d9;
 }
 
-/* --- --- --- ABOUT --- --- --- */
+/*:::: :::: :::: :::: ABOUT :::: :::: :::: :::: */
 .main__about {
     background-color: var(--bg-second-color);
     padding: 1rem 3rem;
     height: 70vh;
 }
-
+/* titulo de la pag. */
 .main__title {
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 1.3rem;
 }
+/* parrafo de la pag. */
 .main__about p {
     text-align: center;
     margin-bottom: 1.3rem;
 }
-
 .main__about span {
     color: var(--font-color-pink);
 }
-
+/* contenedor en fila */
 .row {
     display: flex;
 }
-
+/* img de los doctores */
 .foto-medico {
     width: 50%;
     border-radius: 10%;
 }
-
+/* tarjeta contenedora */
 .card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 1rem;
 }
-
+/* cita de la reseña por los doctores */
 .container blockquote {
     margin: .5rem 0;
     width: 90%;
     text-align: center;
 }
-
+/* contenedor de foto de doctores, nombre y especialidad */
 .medico {
     justify-content: space-evenly;
 }
-
+/* puntaje de la reseña de doctores */
 .card h5 {
     font-size: 1.5rem;
 }
-/* --- --- --- LOGIN --- --- --- */
+
+
+/*:::: :::: :::: :::: LOGIN :::: :::: :::: :::: */
 .main__login, .main__signup {
     background-color: #ffd6ff;
     /* padding: 1rem 3rem; */
@@ -455,12 +458,7 @@ summary::before, summary::after {
     background-repeat: no-repeat;
 }
 
-.pic-login {
-    margin: 2rem;
-    width: 25rem;
-    border-radius: 2rem;
-}
-
+/* seccion principal */
 .section__main {
     display: flex;
     background: #54a7ff49;
@@ -469,8 +467,13 @@ summary::before, summary::after {
     width: 100%;
     height: 100%;
 }
-
-
+/* imagen de la seccion de logeo */
+.pic-login {
+    margin: 2rem;
+    width: 25rem;
+    border-radius: 2rem;
+}
+/* seccion de login contendora */
 .section__login {
     display: flex;
     flex-direction: column;
@@ -482,17 +485,18 @@ summary::before, summary::after {
     border-radius: 2rem;
     color: white;
 }
-
+/* formulario de logeo */
 .login__form {
     display: flex;
     flex-direction: column;
     padding-top: 2rem;
 }
-
+/* entrada de valores */
 .login__form input {
     border-radius: .3rem;
     padding: .5rem;
 }
+/* boton de 'login' */
 .login__form--btn{
     width: 6rem;
     margin: 1rem auto;
@@ -511,62 +515,59 @@ summary::before, summary::after {
 }
 
 
-/* --- --- --- SIGNUP --- --- --- */
-
-.section__signup {
-    background-color: #ddcae79c;
-}
-
+/*:::: :::: :::: :::: SIGNUP :::: :::: :::: :::: */
 .main__signup{
     background-image: url(../img/images/background-signup.png);
 }
-
+/* seccion principal del registro - fondo transparente */
+.section__signup {
+    background-color: #ddcae79c;
+}
+/* seccion contenedora del formulario y titulo */
 .section--signup{
     background-color: #9d64ece8;
     height: 25rem;
     width: 25rem;
 }
-
+/* formulario de registro */
 .form--signup{
     width: 20rem;
 }
-
+/* checkbox de aceptar terminos */
 .form--accepts{
     font-size: x-small;
     margin: .9rem 0;
 }
 
-.btn {
-    background-color: #9d64ec;
-}
-
-.btn:hover {
-    background-color: #af7ff1;
-}
-
-.btn a {
-    color: #ffffff;
-}
-
+/* img de la seccion de registro */
 .pic-signup{
     margin: 2rem;
     width: 35rem;
     border-radius: 2rem;
 }
-
+/* boton de registro */
 .btn--signup {
     width: 13rem;
     background-color: #ffc300;
     color: #77532e;
 }
-
 .btn--signup:hover {
     width: 15rem;
 }
 
+/* boton de 'signup' del nabvar modificado */
+.btn {
+    background-color: #9d64ec;
+}
+.btn:hover {
+    background-color: #af7ff1;
+}
+.btn a {
+    color: #ffffff;
+}
 
-/* --- --- --- DASHBOARD HOME --- --- --- */
 
+/*:::: :::: :::: :::: DASHBOARD HOME :::: :::: :::: :::: */
 /* MAIN */
 .main__dashboard {
     display: flex;
@@ -717,7 +718,7 @@ summary::before, summary::after {
     opacity: 70%;
 }
 
-/* --- --- --- DASHBOARD --- --- --- */
+/*:::: :::: :::: :::: DASHBOARD :::: :::: :::: :::: */
 .crud{
     display: flex;
     flex-direction: column;
@@ -778,5 +779,5 @@ summary::before, summary::after {
     border: .063rem solid var(--btn-green);
 }
 
-/* --- --- --- DASHBOARD-SETTINGS --- --- --- */
+/*:::: :::: :::: :::: DASHBOARD-SETTINGS :::: :::: :::: :::: */
 /* MODAL TEST */
