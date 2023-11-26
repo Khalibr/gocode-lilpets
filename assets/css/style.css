@@ -277,7 +277,6 @@ main {
 }
 
 /* style details - summary */
-
 details {
     padding: .6rem;
     border-radius: .5rem;
@@ -337,7 +336,7 @@ summary::before, summary::after {
     "section-location form";
     background-color: var(--bg-primary-color);
     padding: 1rem 3rem;
-    height: 70vh;
+    height: 75vh;
 }
 /* titulo de la pagina */
 .main__title {
@@ -399,7 +398,7 @@ summary::before, summary::after {
 .main__about {
     background-color: var(--bg-second-color);
     padding: 1rem 3rem;
-    height: 70vh;
+    height: 75vh;
 }
 /* titulo de la pag. */
 .main__title {
@@ -451,7 +450,7 @@ summary::before, summary::after {
 .main__login, .main__signup {
     background-color: #ffd6ff;
     /* padding: 1rem 3rem; */
-    height: 70vh;
+    height: 75vh;
     background-image: url(../img/images/background-login.png);
     background-size: cover;
     background-position: center;
