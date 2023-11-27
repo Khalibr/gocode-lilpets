@@ -205,7 +205,7 @@ main {
 
 .main__services {
     padding: 1rem 3rem;
-    background-color: var(--bg-second-color);
+    background-color: var(--bg-primary-color);
 }
 
 .main__services span {
@@ -567,6 +567,7 @@ summary::before, summary::after {
 
 
 /*:::: :::: :::: :::: DASHBOARD HOME :::: :::: :::: :::: */
+/* comparte estilos entre todos los dashboard */
 /* MAIN */
 .main__dashboard {
     display: flex;
@@ -671,6 +672,7 @@ summary::before, summary::after {
     width: 100%;
 }
 
+/* header - barra de busqueda */
 .windows-navbar {
     padding: .5rem;
     height: 10%;
@@ -686,7 +688,7 @@ summary::before, summary::after {
     margin-left: 1.5rem;
 }
 
-/* --- contenedor del home --- */
+/* --- contenedor derecho estilos para home/inicio --- */
 .windows-container{
     opacity: 50%;
     height: 100%;
@@ -717,8 +719,8 @@ summary::before, summary::after {
     opacity: 70%;
 }
 
-/*:::: :::: :::: :::: DASHBOARD :::: :::: :::: :::: */
-.crud{
+/* estilos para la ventana derecha de registros en dashboard */
+.crud {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -778,5 +780,197 @@ summary::before, summary::after {
     border: .063rem solid var(--btn-green);
 }
 
-/*:::: :::: :::: :::: DASHBOARD-SETTINGS :::: :::: :::: :::: */
-/* MODAL TEST */
+
+/*:::: :::: :::: :::: PROFILE-USER :::: :::: :::: :::: */
+.main__profile{
+    height: 75vh;
+    display: flex;
+}
+
+/* comparte estilos con el .dashboard__aside solo cambio el ancho y altura del mismo */
+.aside-profile {
+    height: 100%;
+    width: 20%;
+}
+
+/* icono 'user' para el profile */
+.aside-profile .fa-user {
+    color: #90be06;
+}
+
+/* ventana derecha profile contenido inicial */
+.profile__windows {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* foto de perfil del usuario */
+.profile__windows img {
+    width: 10rem;
+    margin-right:  1rem;
+}
+/* contendor de informacion de perfil */
+.windows--info * {
+    margin-top: 1.5rem;
+}
+.windows--info h1 {
+    font-size: 1.5rem;
+    color: var(--orange);
+}
+
+
+/*:::: :::: :::: :::: PROFILE-MASCOTS :::: :::: :::: :::: */
+
+/* seccion principal de mascotas con flex para todos los contedores hijos */
+.profile__windows-mascots * {
+    display: flex;
+    flex-direction: column;
+}
+/* estilos propios de la seccion principal */
+.profile__windows-mascots {
+    width: 100%;
+    padding: 1rem 3rem;
+}
+/* contendor al final del ancho */
+.btn-addmascot {
+    align-items: end;
+}
+
+
+/*--------- INCIO TESTEO DE MODAL PARA AGREGAR ANIMALES */
+/* CONTENDOR DE LA VENTANA MODAL */
+/* estilos para el boton modal */
+.btn-addmascot > label {
+    background-color: var(--btn-green);
+    padding: 0 .8rem;
+    color: var(--white);
+    border-radius: .2rem;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.btn-addmascot > label:hover {
+    background-color: #74a152;
+}
+
+/* desactivar la vista de la ventana */
+#btn-modal {
+    display: none;
+}
+
+/* contenedor FONDO de la ventana modal */
+.container-modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: #707070a6;
+    left: 0;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+/* estar chekeado hace que en consecuencia todos sus hijos aparezcan */
+#btn-modal:checked ~ .container-modal{
+    display: flex;
+}
+
+/*contenido de la informacion  */
+.content-modal {
+    justify-content: space-between;
+    width: 60%;
+    height: 70%;
+    padding: 2.5rem;
+    background-color: #fff;
+    border-radius: .5rem;
+    text-align: center;
+}
+
+/* grid para el formulario */
+.content-modal form {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4, 1fr);
+    height: 50%;
+}
+
+/* agrupamiento de estilos para todo el formulario */
+.content-modal form > label,
+.content-modal form > input,
+.content-modal form select,
+.test-file /*<- acomoda el contenedor del input file*/ {
+    flex-direction: row;
+    padding: 0 .5rem;
+    align-items: center;
+    margin: .5rem;
+    border: .065rem solid var(--sd-grey);
+}
+/* estilos especificos para fecha de nacimiento */
+.content-modal form > label > input {
+    flex-direction: row;
+    padding: 0 .5rem;
+}
+
+
+/* boton para cerrar el modal */
+.btn-close {
+    width: 100%;
+    margin-top: 1rem;
+    flex-direction: row;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+.btn-close label:last-child {
+    background-color: var(--black);
+    margin-left: .5rem;
+}
+
+/*--------- FIN TESTEO DE MODAL PARA AGREGAR ANIMALES */
+
+/* contendor de las tarjetas mascotas */
+.mascots--container{
+    overflow-y: auto;
+    height: 95%;
+}
+
+/* contendores de las tarjetas que van a en fila */
+.mascot--row {
+    flex-direction: row;
+    align-items: center;
+    height: 30vh;
+    padding: 1.5rem .5rem;
+}
+/* foto de las mascotas */
+.mascot--row img {
+    width: 10rem;
+    margin-right: 2rem;
+}
+/* ancho total del contedor para usar grid */
+.mascot--info {
+    width: 100%;
+}
+/* color del nombre de mascota */
+.mascot--info h1{
+    color: var(--orange);
+}
+/* informacion de la mascota */
+.mascot--column {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+
+.mascot--column p {
+    flex-direction: row;
+}
+
+/* espacio artificial entre el dato y la informacion */
+.mascot--column strong {
+    margin-right: 1rem;
+}
+
+/* ESTOY CANSADO JEFE */
