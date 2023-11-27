@@ -936,6 +936,11 @@ summary::before, summary::after {
     overflow-y: auto;
     height: 95%;
 }
+/* linea divisoria entra mascotas */
+.mascots--container > hr {
+    border: .065rem solid var(--sd-grey);
+    width: 95%;
+}
 
 /* contendores de las tarjetas que van a en fila */
 .mascot--row {
@@ -972,5 +977,6 @@ summary::before, summary::after {
 .mascot--column strong {
     margin-right: 1rem;
 }
+
 
 /* ESTOY CANSADO JEFE */
